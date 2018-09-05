@@ -1,0 +1,15 @@
+<h1>Sign up</h1>
+
+<form action="{% url 'spins:register' %}" method="post">
+
+{% csrf_token %}
+
+{% if form_fields %}
+    <ul>
+    {% for field in form_fields %}
+        <li>field</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No forms are available.</p>
+{% endif %}
