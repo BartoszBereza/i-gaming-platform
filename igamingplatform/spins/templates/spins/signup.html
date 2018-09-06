@@ -1,13 +1,13 @@
 <h1>Sign up</h1>
 
-<form action="{% url 'spins:register' %}" method="post">
+<a target="_blank" class="btn btn-info pull-right" href="{{ column_3_item.link_for_item }}">Check It Out</a><form action="{% url 'spins:register' %}" method="post">
 
 {% csrf_token %}
 
 {% if form_fields %}
     <ul>
     {% for field in form_fields %}
-        <li>field</li>
+        <li>{{ field }}</li>
     {% endfor %}
     </ul>
 {% else %}
